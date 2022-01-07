@@ -1,0 +1,43 @@
+@mixin shadow-sm
+    box-shadow: 0 4px 16px rgba($black-500,.5)
+@mixin shadow-md
+    box-shadow: 0 8px 24px rgba($black-500,.3)
+@mixin shadow-lg
+    box-shadow: 0 16px 32px rgba($black-500,.3)
+@mixin img_artist ($flex-basis, $flex-grow)
+    background-position: center
+    background-size: cover
+    flex-basis: $flex-basis
+    flex-grow: $flex-grow
+    transition: .9s
+    &:hover
+        flex-basis: 50%
+@mixin box($bgcolor, $brcolor)
+    display: flex
+    flex-direction: column
+    padding: 1rem
+    background-color: $bgcolor
+    border: 1px solid $brcolor
+    transition: .5s ease-out
+    @include respond(tablet)
+        font-size: 2rem
+        flex-direction: column
+    @include respond(desktop)
+@mixin section-set($bg)
+    background-color: $bg
+    padding: 4rem 2rem
+    transition: .5s
+
+
+//breakpoints
+@mixin respond ($breakpoint) 
+
+    @if $breakpoint==tablet 
+
+        @media only screen and (min-width: 768px) 
+            @content;
+
+    @if $breakpoint==desktop 
+        @media only screen and (min-width: 1024px) 
+            @content;
+        

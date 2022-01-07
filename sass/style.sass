@@ -1,0 +1,76 @@
+@import 'colors'
+@import 'mixins'
+@import 'animation'
+@import 'nav'
+@import 'bio'
+@import 'intro'
+@import 'shop'
+@import 'calendar'
+@import 'albums'
+@import 'contact'
+
+*
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+html
+    font-size: 14px
+    @include respond(tablet)
+        font-size: 16px       
+    @include respond(desktop)
+        font-size: 22px       
+    
+body
+    background-color: #010102
+    color: $white-500
+
+// font-family: 'Oswald', sans-serif
+// font-family: 'Poppins', sans-serif
+// font-family: 'Vujahday Script', cursive
+
+.wrap
+    max-width: 1240px
+    margin: 0 auto
+    display: flex
+    flex-direction: column
+    row-gap: 1rem
+
+.btn__buy
+    padding: .5rem 0
+    font-size: 1rem
+    font-weight: bold
+    border: 1px solid $white-300
+    background-color: $white-100
+    color: $white-500
+    margin-top: 1rem
+    width: 100%
+    transition: .3s
+    @include respond(desktop)
+        font-size: .75rem
+        padding: .8rem
+    &:hover
+        background-color: $blue-300
+        color: $white-500
+        border: 1px solid $white-300
+        @include shadow-md
+
+.section__title
+    font-family: 'Oswald'
+    margin-bottom: 1rem
+    font-size: 3rem
+    text-align: center
+
+p
+    font-family: 'Poppins'
+
+h1, h2, h3, h4, h5, h6
+    font-family: 'Oswald'
+
+footer
+    height: 5vh
+    width: 100%
+    background-color: $blue-100
+    color: $black-500
+    font-size: .6rem
+    text-align: center
+    line-height: 5vh

@@ -1,0 +1,150 @@
+nav
+    position: fixed
+    display: flex
+    width: 100%
+    height: 48px
+    justify-content: space-between
+    align-content: center
+    background-color: rgba(0,0,0,.8)
+    z-index: 2
+    @include respond(desktop)
+        justify-content: center
+    &>.nav__logo
+        padding: 8px
+        @include respond(desktop)
+            display: none
+    .nav__hamburger
+        margin-right: 1rem
+        width: 48px
+        height: 48px
+        background-color: transparent
+        display: flex
+        flex-direction: column
+        justify-content: space-around
+        padding: 12px 8px
+        z-index: 1
+        @include respond(tablet)
+            font-size: 4rem
+        @include respond(desktop)
+            display: none
+        &>div
+            align-self: self-end
+            margin: 0 auto
+            height: 2px    
+            background-color: #fff
+            border-radius: 1px
+            transform: rotate(0deg) translate(0,0)
+            transition: .5s
+            &:nth-child(even)
+                width: 40%
+                transform: rotate(0deg) translate(0,0)
+
+            &:nth-child(odd)
+                transform: rotate(0deg) translate(0,0)
+                width: 80%
+
+        &:hover
+            &>div:nth-child(even)
+                width: 80%
+            &>div:nth-child(odd)
+                width: 40%
+
+    .opened
+        &>div
+            &:nth-child(1)
+                transform: rotate(405deg) translate(5px, 5px)                
+            &:nth-child(2)
+                width: 0%
+                transform: rotate(360deg) translate(0px, 0px)
+
+            &:nth-child(3)
+                transform: rotate(-405deg) translate(5px, -6px)
+                width: 80%
+
+        &:hover
+            &>div:nth-child(even)
+                width: 0%
+            &>div:nth-child(odd)
+                width: 40%
+
+    .nav--desktop
+        display: none  
+        width: 100%
+        max-width: 1200px
+        font-family: 'Poppins'
+        justify-content: center
+        transition: .5s
+        @include respond(desktop)
+            display: flex
+        a   
+            display: block
+            width: 100%
+            height: 48px
+            font-size: .6rem
+            color: $white-500  
+            text-decoration: none
+            transition: .5s
+        .nav__item
+            position: relative
+            line-height: 48px
+            width: 120px  
+            text-align: center   
+            &::after
+                    content: ''
+                    display: block
+                    position: absolute
+                    bottom: 10%
+                    left: 50%
+                    height: 6px
+                    clip-path: polygon(0% 100%, 50% 0%, 100% 100%)
+                    width: 0%
+                    background-color: $blue-100
+                    transition: .5s
+            &:hover
+                a
+                    color: $blue-100
+                &::after
+                    left: 40%
+                    width: 20%
+            &--active
+                a
+                    color: $blue-100
+                &::after
+                    left: 45%
+                    width: 10%
+
+        &>.nav__logo
+            padding: 8px
+
+    .nav--mobile
+        position: absolute
+        background-color: $black-500
+        width: 100%
+        height: 100vh
+        display: flex
+        flex-direction: column
+        justify-content: center
+        right: 100%
+        font-family: 'Poppins'
+        transition: .5s
+        @include respond(tablet)
+            font-size: 2rem
+
+        @include respond(desktop)
+            display: none
+        .nav__item
+            padding: 0 2rem
+            margin-right: 24px
+            align-self: self-end
+            height: calc(100vh/10)
+            line-height: calc(100vh/10)
+            font-size: 2em
+            transition: .5s
+            a
+                color: $white-500
+                text-decoration: none
+            &:hover
+                padding: 0 4rem
+                border-bottom: 4px solid $blue-500
+    .nav--show
+        right: 0%

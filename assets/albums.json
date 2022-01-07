@@ -1,0 +1,54 @@
+{
+    "albums": [{
+            "album": "Album #1",
+            "released": "08 march, 2018",
+            "cover": "/./assets/images/cover_album1.png",
+            "cdlink": "https://www.buycd.com/theloopsters",
+            "tracklist": {
+                "1": "Title #1",
+                "2": "Title #2",
+                "3": "Title #3",
+                "4": "Title #4",
+                "5": "Title #5",
+                "6": "Title #6",
+                "7": "Title #7",
+                "8": "Title #8"
+            }
+        },
+        {
+            "album": "Album #2",
+            "released": "26 february, 2020",
+            "cover": "/./assets/images/cover_album2.png",
+            "cdlink": "https://www.buycd.com/theloopsters",
+            "tracklist": {
+                "1": "Title #1",
+                "2": "Title #2",
+                "3": "Title #3",
+                "4": "Title #4",
+                "5": "Title #5",
+                "6": "Title #6",
+                "7": "Title #7",
+                "8": "Title #8",
+                "9": "Title #9",
+                "10": "Title #10",
+                "11": "Title #11"
+            }
+        },
+        {
+            "album": "Album #3",
+            "released": "15 january, 2021",
+            "cover": "/./assets/images/cover_album3.png",
+            "cdlink": "https://www.buycd.com/theloopsters",
+            "tracklist": {
+                "1": "Title #1",
+                "2": "Title #2",
+                "3": "Title #3",
+                "4": "Title #4",
+                "5": "Title #5",
+                "6": "Title #6",
+                "7": "Title #7",
+                "8": "Title #8"
+            }
+        }
+    ]
+}

@@ -1,0 +1,45 @@
+#contact
+    @include section-set(#010102)
+    .wrap
+        @include respond(desktop)
+            flex-direction: row
+            justify-content: center
+            column-gap: 2rem
+        .contact__details
+            flex-basis: 25%
+            &>p:nth-child(4)
+                margin: 2rem 0
+            .social
+                display: flex
+                column-gap: .6rem
+                a
+                    flex-basis: 33%
+                    background-color: $white-100
+                    border: 1px solid $white-100
+                    padding: .6rem
+                    text-decoration: none
+                    font-size: .6rem
+                    font-family: 'Oswald'
+                    cursor: pointer
+                    transition: .3s
+                    i
+                        margin-right: .5rem
+                    &:hover
+                        background-color: $white-300
+                        border: 1px solid $white-300
+                
+        .contact__form
+            flex-basis: 75%
+            h2
+                margin-bottom: 1rem
+            form
+                display: flex
+                flex-direction: column
+                font-family: 'Poppins'
+                input, textarea
+                    background-color: $white-100
+                    border: none
+                    border-bottom: 1px solid $white-100
+                    line-height: 40px
+                    margin-bottom: 1rem
+                    color: $white-500

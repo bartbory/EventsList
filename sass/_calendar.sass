@@ -1,0 +1,54 @@
+#calendar
+    @include section-set($blue-500)
+    clip-path: polygon(0 calc(0% + 10vw), 100% 0, 100% calc(100% - 10vw), 50% 100%, 0% calc(100% - 10vw))
+    @include respond(tablet)
+        padding: 10rem 2rem
+    @include respond(desktop)
+        clip-path: polygon(0 calc(0% + 5vw), 100% 0, 100% calc(100% - 2vw), 50% 100%, 0% calc(100% - 2vw))
+        padding: 12rem 2rem
+    .wrap
+        @include respond(desktop)
+            flex-direction: row
+            flex-wrap: wrap
+            column-gap: 2rem
+            row-gap: 2rem
+            justify-content: center
+.event
+    @include box($blue-500, $white-300)
+    @include respond(desktop)
+        min-width: 45%
+        max-width: 50%
+    &:hover
+        @include shadow-md
+    &__date
+        font-size: .8rem
+    &__loc
+        display: flex
+        flex-wrap: wrap
+        justify-content: space-between
+        font-size: 1.2rem
+        .loc__tour
+            
+            position: relative
+            color: $white-500
+            text-align: right
+            text-shadow: -4px 3px 0px $blue-500
+            &::before
+                content: ''
+                display: block
+                position: absolute
+                width: 85%
+                height: 40%
+                top: 50%
+                left: 5%
+                background-color: $white-300
+                z-index: 1
+        .loc__city
+            // font-size: 2rem
+    &__place
+        background-color: $white-500
+        color: $blue-500
+        font-size: 1rem
+        padding: .6rem 0 .6rem 1rem
+        font-weight: bold
+        margin-bottom: 1rem
