@@ -8,8 +8,9 @@
     z-index: -2
     margin-top: -10vw
     @include respond(desktop)
-    height: 80vh
-        clip-path: polygon(0% 0%, 50% calc(0% + 5vw), 100% 0%, 100% 100%, 0% 0%)
+        margin-top: -10vw
+        height: 80vh
+        clip-path: polygon(0% 0%, 50% calc(0% + 5vw), 100% 0%, 100% 100%, 0% calc(100% - 5vw))
 
 #bio
     padding: 2rem 0 0 0
@@ -38,7 +39,7 @@
                 top: 0
                 background-color: rgba($blue-500,.8)
                 z-index: 1
-                animation: hoverArtistsOff .5s                 
+                animation: hoverArtistsOff 1s                 
             @include respond(desktop)
                 transform: translateX(600%)
                 &:hover::after
@@ -122,6 +123,7 @@
                 bottom: 0
                 padding: 1rem
                 z-index: 2
+                transition: opacity .3s .3s
                 @include respond(desktop)
                     opacity: 0
                     display: block
