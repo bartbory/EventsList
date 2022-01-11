@@ -3,11 +3,12 @@
     background-image: url('https://images.pexels.com/photos/9256877/pexels-photo-9256877.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260')
     background-size: cover
     background-position: center
-    background-attachment: fixed
+    background-attachment: scroll
     clip-path: polygon(0% 0%, 50% calc(0% + 10vw), 100% 0%, 100% 100%, 0 calc(100% - 20vw))
     z-index: -2
     margin-top: -10vw
     @include respond(desktop)
+        background-attachment: fixed
         margin-top: -10vw
         height: 80vh
         clip-path: polygon(0% 0%, 50% calc(0% + 5vw), 100% 0%, 100% 100%, 0% calc(100% - 5vw))
